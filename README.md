@@ -12,6 +12,7 @@ The repository is organized as follows:
 │   ├── predictions_distilbert-base-uncased-distilled-squad.json
 │   ├── predictions_minimlv.json
 │   ├── predictions_minimlv_ft.json
+│   ├── predictions_spanBERT_model15.json
 │   ├── roberta_ft_10_epochs.json
 │   └── roberta_ft_3_epochs.json
 ├── notebooks
@@ -26,13 +27,18 @@ The repository is organized as follows:
 │   ├── train_roberta_10_epochs.ipynb
 │   ├── train_roberta_3_epochs.ipynb
 │   └── using_pyspark_for_qa.ipynb
-└── requirements.txt
+├── requirements.txt
+└── spanbert
+    ├── SpanBERT_Base.py
+    └── run_QA.py
 ```
 ## Files
 
 - `json_results`: This directory contains the prediction results of the models.
 - `notebooks`: This directory contains Jupyter notebooks with the code for training the models and using them for question answering. The fine-tuning notebooks start with train, and the inference notebooks start with roberta_qa, minilmv2, or using_pyspark_for_qa.
-
+- `spanbert`: This directory contains Python scripts related to the SpanBERT model. 
+    - `SpanBERT_Base.py`: This script contains the base implementation of the SpanBERT model.
+    - `run_QA.py`: This script is used to run the question answering task using the SpanBERT model.
 - `requirements.txt`: This file lists the Python dependencies required for running the code.
 
 Note, the models are not included in this repository. They can be downloaded from the Hugging Face model hub, for both the pre-trained and fine-tuned models.
